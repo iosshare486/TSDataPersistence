@@ -79,7 +79,7 @@ Pod::Spec.new do |s|
   #  Specify the location from where the source should be retrieved.
   #  Supports git, hg, bzr, svn and HTTP.
   #
-
+s.ios.deployment_target = '8.0'
   s.source       = { :git => "http://gitlab.caiqr.com/ios_module/TSDataPersistence.git", :tag => "#{s.version.to_s}" }
 
 
