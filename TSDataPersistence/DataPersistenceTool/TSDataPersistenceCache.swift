@@ -56,17 +56,17 @@ open class TSDataPersistenceCacheGenerator : IteratorProtocol {
 public typealias CacheAsyncCompletion = (_ cache: TSDataPersistenceCache?, _ key: String?, _ object: Any?) -> Void
 
 /**
- Track Cache Prefix, use on default disk cache folder name and queue name
+ Cache Prefix, use on default disk cache folder name and queue name
  */
-let TrackCachePrefix: String = "com.trackcache."
+let TrackCachePrefix: String = "com.tsdpcache."
 
 /**
- Track Cache default name, default disk cache folder name
+ Cache default name, default disk cache folder name
  */
-let TrackCacheDefauleName: String = "defaultTrackCache"
+let TrackCacheDefauleName: String = "defaultTSDPCache"
 
 /**
- TrackCache is a thread safe cache, contain a thread safe memory cache and a thread safe diskcache.
+ this is a thread safe cache, contain a thread safe memory cache and a thread safe diskcache.
  And support thread safe `for`...`in` loops, map, forEach...
  */
 open class TSDataPersistenceCache {

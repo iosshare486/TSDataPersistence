@@ -302,8 +302,6 @@ private class LinkedList<T> {
 extension LinkedList : Sequence {
     
     fileprivate typealias Iterator = LinkedListGenerator<T>
-    
-    
     fileprivate func makeIterator() -> LinkedListGenerator<T> {
         var generatror: LinkedListGenerator<T>
         generatror = LinkedListGenerator(node: headNode)
