@@ -111,6 +111,7 @@
 		51E8431320DCCD9700C7617D /* TSDataPersistence */ = {
 			isa = PBXGroup;
 			children = (
+				51E8434D20DDDD3900C7617D /* TSDataPersistence.md */,
 				51E8435020DE23A600C7617D /* LICENSE */,
 				51E8434F20DE23A600C7617D /* TSDataPersistence.podspec */,
 				51E8434220DCCDC400C7617D /* DataPersistenceTool */,
@@ -149,7 +150,6 @@
 				51E8434720DCCF8600C7617D /* TSDataPersistenceDiskCache.swift */,
 				51E8434920DCCFAA00C7617D /* TSDataPersistenceCache.swift */,
 				51E8434B20DCCFBE00C7617D /* TSDataPersistenceLinkedList.swift */,
-				51E8434D20DDDD3900C7617D /* TSDataPersistence.md */,
 			);
 			path = DataPersistenceTool;
 			sourceTree = "<group>";
