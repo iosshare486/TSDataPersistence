@@ -19,6 +19,8 @@
 		51E8434A20DCCFAA00C7617D /* TSDataPersistenceCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E8434920DCCFAA00C7617D /* TSDataPersistenceCache.swift */; };
 		51E8434C20DCCFBE00C7617D /* TSDataPersistenceLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E8434B20DCCFBE00C7617D /* TSDataPersistenceLinkedList.swift */; };
 		51E8434E20DDDD3900C7617D /* TSDataPersistence.md in Resources */ = {isa = PBXBuildFile; fileRef = 51E8434D20DDDD3900C7617D /* TSDataPersistence.md */; };
+		51E8435120DE23A700C7617D /* TSDataPersistence.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 51E8434F20DE23A600C7617D /* TSDataPersistence.podspec */; };
+		51E8435220DE23A700C7617D /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 51E8435020DE23A600C7617D /* LICENSE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		51E8434920DCCFAA00C7617D /* TSDataPersistenceCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSDataPersistenceCache.swift; sourceTree = "<group>"; };
 		51E8434B20DCCFBE00C7617D /* TSDataPersistenceLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSDataPersistenceLinkedList.swift; sourceTree = "<group>"; };
 		51E8434D20DDDD3900C7617D /* TSDataPersistence.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = TSDataPersistence.md; sourceTree = "<group>"; };
+		51E8434F20DE23A600C7617D /* TSDataPersistence.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TSDataPersistence.podspec; sourceTree = SOURCE_ROOT; };
+		51E8435020DE23A600C7617D /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,8 @@
 		51E8431320DCCD9700C7617D /* TSDataPersistence */ = {
 			isa = PBXGroup;
 			children = (
+				51E8435020DE23A600C7617D /* LICENSE */,
+				51E8434F20DE23A600C7617D /* TSDataPersistence.podspec */,
 				51E8434220DCCDC400C7617D /* DataPersistenceTool */,
 				51E8431420DCCD9700C7617D /* AppDelegate.swift */,
 				51E8431620DCCD9700C7617D /* ViewController.swift */,
@@ -252,9 +258,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51E8435220DE23A700C7617D /* LICENSE in Resources */,
 				51E8431F20DCCD9900C7617D /* LaunchScreen.storyboard in Resources */,
 				51E8434E20DDDD3900C7617D /* TSDataPersistence.md in Resources */,
 				51E8431C20DCCD9900C7617D /* Assets.xcassets in Resources */,
+				51E8435120DE23A700C7617D /* TSDataPersistence.podspec in Resources */,
 				51E8431A20DCCD9700C7617D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
