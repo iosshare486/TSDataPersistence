@@ -223,6 +223,7 @@ public extension TSDataPersistenceCache {
      */
     
     public func set<T:Codable>(_ object: T, forKey key: String) {
+        
         memoryCache.set(object: object as AnyObject, forKey: key)
         diskCache.set(object, forKey: key)
     }
