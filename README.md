@@ -1,6 +1,6 @@
-#TSDataPersistence
+# TSDataPersistence
 
-###数据持久化解决方案
+### 数据持久化解决方案
 >1、支持本地缓存、内存缓存
 >
 >2、支持异步线程安全式存储
@@ -10,7 +10,7 @@
 
 
 
-###文件构成
+### 文件构成
 ![alt](https://ohduoklem.qnssl.com/WechatIMG33.jpeg)
 
 >1、TSDataPersistenceMemoryCache.swift
@@ -26,10 +26,10 @@
 >>数据本地化直接操作对象，通过该类的对象发起数据本地化操作
 
 
-##使用
+## 使用
     //实例化对象
 	let cache = TSDataPersistenceCache.shareInstance
-###字符串等轻量级数据
+### 字符串等轻量级数据
 	//写入
 	//向内存缓存中存入数据
 	cache.memoryCache.set(object: "内存缓存数据" as AnyObject, forKey: "内存缓存key")
@@ -47,7 +47,7 @@
         }
 
 
-###模型、JSON数据等
+### 模型、JSON数据等
 
 
     //JSON Data
