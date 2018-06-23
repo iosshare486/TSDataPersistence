@@ -18,7 +18,6 @@
 		51E8434820DCCF8600C7617D /* TSDataPersistenceDiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E8434720DCCF8600C7617D /* TSDataPersistenceDiskCache.swift */; };
 		51E8434A20DCCFAA00C7617D /* TSDataPersistenceCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E8434920DCCFAA00C7617D /* TSDataPersistenceCache.swift */; };
 		51E8434C20DCCFBE00C7617D /* TSDataPersistenceLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E8434B20DCCFBE00C7617D /* TSDataPersistenceLinkedList.swift */; };
-		51E8434E20DDDD3900C7617D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 51E8434D20DDDD3900C7617D /* README.md */; };
 		51E8435120DE23A700C7617D /* TSDataPersistence.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 51E8434F20DE23A600C7617D /* TSDataPersistence.podspec */; };
 		51E8435220DE23A700C7617D /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 51E8435020DE23A600C7617D /* LICENSE */; };
 /* End PBXBuildFile section */
@@ -58,7 +57,6 @@
 		51E8434720DCCF8600C7617D /* TSDataPersistenceDiskCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSDataPersistenceDiskCache.swift; sourceTree = "<group>"; };
 		51E8434920DCCFAA00C7617D /* TSDataPersistenceCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSDataPersistenceCache.swift; sourceTree = "<group>"; };
 		51E8434B20DCCFBE00C7617D /* TSDataPersistenceLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSDataPersistenceLinkedList.swift; sourceTree = "<group>"; };
-		51E8434D20DDDD3900C7617D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		51E8434F20DE23A600C7617D /* TSDataPersistence.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TSDataPersistence.podspec; sourceTree = SOURCE_ROOT; };
 		51E8435020DE23A600C7617D /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -111,7 +109,6 @@
 		51E8431320DCCD9700C7617D /* TSDataPersistence */ = {
 			isa = PBXGroup;
 			children = (
-				51E8434D20DDDD3900C7617D /* README.md */,
 				51E8435020DE23A600C7617D /* LICENSE */,
 				51E8434F20DE23A600C7617D /* TSDataPersistence.podspec */,
 				51E8434220DCCDC400C7617D /* DataPersistenceTool */,
@@ -260,7 +257,6 @@
 			files = (
 				51E8435220DE23A700C7617D /* LICENSE in Resources */,
 				51E8431F20DCCD9900C7617D /* LaunchScreen.storyboard in Resources */,
-				51E8434E20DDDD3900C7617D /* README.md in Resources */,
 				51E8431C20DCCD9900C7617D /* Assets.xcassets in Resources */,
 				51E8435120DE23A700C7617D /* TSDataPersistence.podspec in Resources */,
 				51E8431A20DCCD9700C7617D /* Main.storyboard in Resources */,
