@@ -224,8 +224,16 @@ public extension TSDataPersistenceCache {
     
     public func set<T:Codable>(_ object: T, forKey key: String) {
         
-        memoryCache.set(object: object as AnyObject, forKey: key)
-        diskCache.set(object, forKey: key)
+        do {
+            let encoder = JSONEncoder()
+            let aData = try encoder.encode(object)
+            memoryCache.set(object: aData as AnyObject, forKey: key)
+            diskCache.set(aData, forKey: key)
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+        
     }
     public func setObject<T:Codable>(_ object:T, forKey key: String) {
         let encoder = JSONEncoder()
@@ -244,19 +252,46 @@ public extension TSDataPersistenceCache {
      - parameter completion: search completion call back
      */
     
-    public func object(forKey key: String) -> AnyObject? {
+//    public func object(forKey key: String) -> AnyObject? {
+//        if let object = memoryCache.object(forKey: key) {
+//            return object
+//        }
+//        else {
+//            if let object = diskCache.object(forKey: key) {
+//                memoryCache.set(object: object, forKey: key)
+//                return object
+//            }
+//        }
+//        return nil
+//    }
+    public func object<T: Codable>(forKey key: String) -> T? {
         if let object = memoryCache.object(forKey: key) {
-            return object
+            let decoder = JSONDecoder()
+            do {
+                let model = try decoder.decode(T.self, from: object as! Data)
+                return model
+            } catch {
+                print(error.localizedDescription)
+            }
+
         }
         else {
             if let object = diskCache.object(forKey: key) {
                 memoryCache.set(object: object, forKey: key)
-                return object
+                
+                let decoder = JSONDecoder()
+                do {
+                    let model = try decoder.decode(T.self, from: object as! Data)
+  
+                    return model
+                } catch {
+                    print(error.localizedDescription)
+                }
+                
             }
         }
         return nil
     }
-    
     /**
      Sync remove object from memory cache and disk cache
      

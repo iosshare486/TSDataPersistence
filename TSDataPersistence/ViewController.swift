@@ -50,24 +50,15 @@ class ViewController: UIViewController {
         let model = AModel()
         model.name = "sdfsdf"
         model.age = "7"
-        do {
-            let encoder = JSONEncoder()
-            let aData = try encoder.encode(model)
-            cache.set(aData, forKey: "Model")
-        } catch {
-            print(error.localizedDescription)
-        }
-       
         
-//        if let _ =  cache.object(forKey: "Model"){
-        let decoder = JSONDecoder()
-        do {
-            let model = try decoder.decode(AModel.self, from: cache.object(forKey: "Model") as! Data)
-            print(model as! AModel)
-        } catch {
-            print(error.localizedDescription)
+        cache.set(model, forKey: "Model")
+        
+        if let md: AModel = cache.object(forKey: "Model") {
+            print(md)
         }
-//        }
+
+        
+        //        }
         // Do any additional setup after loading the view, typically from a nib.
     }
 
