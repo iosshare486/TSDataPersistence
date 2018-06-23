@@ -131,7 +131,7 @@ s.ios.deployment_target = '8.0'
   #  you can include multiple dependencies to ensure it works.
 
   # s.requires_arc = true
-
+s.swift_version = '4.0'
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
 
