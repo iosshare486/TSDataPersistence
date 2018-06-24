@@ -69,6 +69,9 @@ let TrackCacheDefauleName: String = "defaultTSDPCache"
  this is a thread safe cache, contain a thread safe memory cache and a thread safe diskcache.
  And support thread safe `for`...`in` loops, map, forEach...
  */
+
+let ts_cache = TSDataPersistenceCache.shareInstance
+
 open class TSDataPersistenceCache {
     
     /**

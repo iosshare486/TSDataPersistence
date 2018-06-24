@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         
         
         
-        let cache = TSDataPersistenceCache.shareInstance
+//        let cache = TSDataPersistenceCache.shareInstance
         
 //        if let huancunStr =  cache.object(forKey: "缓存key"){
 //            print(huancunStr as! String)
@@ -51,9 +51,9 @@ class ViewController: UIViewController {
         model.name = "sdfsdf"
         model.age = "7"
         
-        cache.set(model, forKey: "Model")
+        ts_cache.set(model, forKey: "Model")
         
-        if let md: AModel = cache.object(forKey: "Model") {
+        if let md: AModel = ts_cache.object(forKey: "Model") {
             print(md)
         }
 
