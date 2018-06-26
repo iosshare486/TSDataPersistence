@@ -15,7 +15,7 @@
 ### 字符串等轻量级数据
 	//写入
 	//默认方式存入数据
-	ts_cache.set("洪利", `forKey`: "cacheObj")
+	ts_cache.set("洪利", forKey: "cacheObj")
 	//单独向内存中存入数据
 	ts_cache.memoryCache.set(object: "memoryDataCache", forKey: "memory")
 	//单独向本地磁盘中存入数据
@@ -24,8 +24,8 @@
 	
 	
 	//读取
-	if let md: <font color = #ff4747>cacheData</font> = ts_cache.object(forKey: "cacheObj") {
-            print(`md`)
+	if let md: cacheData = ts_cache.object(forKey: "cacheObj") {
+            print(md)
         }
         
 > `ts_cache`.set(...) 同时向内存、本地磁盘中存入
