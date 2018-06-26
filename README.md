@@ -24,7 +24,7 @@
 	
 	
 	//读取
-	if let md: cacheData = ts_cache.object(forKey: "cacheObj") {
+	if let md: <font color = #ff4747>cacheData</font> = ts_cache.object(forKey: "cacheObj") {
             print(`md`)
         }
         
