@@ -10,21 +10,21 @@
 
 
 ## 使用
-    //直接使用对象
-	`ts_cache`
+//直接使用对象
+`ts_cache`
 ### 字符串等轻量级数据
 	//写入
 	//默认方式存入数据
-	`ts_cache`.set("洪利", `forKey`: "cacheObj")
+	ts_cache.set("洪利", `forKey`: "cacheObj")
 	//单独向内存中存入数据
-	`ts_cache`.memoryCache.set(`object`: "memoryDataCache", `forKey`: "memory")
+	ts_cache.memoryCache.set(object: "memoryDataCache", forKey: "memory")
 	//单独向本地磁盘中存入数据
-	`ts_cache`.memoryCache.set(`object`: "diskDataCache" as AnyObject, `forKey`: "disk")
+	ts_cache.memoryCache.set(object: "diskDataCache" as AnyObject, forKey: "disk")
 	
 	
 	
 	//读取
-	if let `md`: cacheData = `ts_cache`.object(forKey: "cacheObj") {
+	if let md: cacheData = ts_cache.object(forKey: "cacheObj") {
             print(`md`)
         }
         
@@ -38,14 +38,14 @@
 > 
 > ps：model等对象需要遵循 Codable，如下        
 
-	let `model` = AModel()
-    `ts_cache`.set(model, forKey: "Model")
-    if let `md`: `AModel` = `ts_cache`.object(forKey: "Model") {
-        print(`md`)
+	let model = AModel()
+    ts_cache.set(model, forKey: "Model")
+    if let md: AModel = ts_cache.object(forKey: "Model") {
+        print(md)
     }
 
 	//声明Amodel
-	class `AModel`:Codable {
+	class AModel:Codable {
 	    var name = "洪利"
 	    var age = "8"
 	    
