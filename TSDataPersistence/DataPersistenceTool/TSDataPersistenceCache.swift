@@ -70,7 +70,7 @@ let TrackCacheDefauleName: String = "defaultTSDPCache"
  And support thread safe `for`...`in` loops, map, forEach...
  */
 
-let ts_cache = TSDataPersistenceCache.shareInstance
+public let ts_cache = TSDataPersistenceCache.shareInstance
 
 open class TSDataPersistenceCache {
     
@@ -94,7 +94,7 @@ open class TSDataPersistenceCache {
     /**
      A share cache, contain a thread safe memory cache and a thread safe diskcache
      */
-    open static let shareInstance = TSDataPersistenceCache(name: TrackCacheDefauleName)!
+    open static let shareInstance = TSDataPersistenceCache(path: NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true)[0])!
     
     /**
      Design constructor
@@ -117,8 +117,8 @@ open class TSDataPersistenceCache {
      
      - parameter name: cache name
      */
-    public convenience init?(name: String){
-        self.init(name: name, path: NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true)[0])
+    public convenience init?(path: String){
+        self.init(name: TrackCacheDefauleName, path: path)
     }
 }
 

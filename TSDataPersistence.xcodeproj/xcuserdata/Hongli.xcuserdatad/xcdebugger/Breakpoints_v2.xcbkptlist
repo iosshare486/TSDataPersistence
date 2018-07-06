@@ -15,8 +15,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "141"
             endingLineNumber = "141"
-            landmarkName = "set(_:forKey:completion:)"
-            landmarkType = "7">
+            landmarkName = "TSDataPersistenceCache"
+            landmarkType = "21">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
