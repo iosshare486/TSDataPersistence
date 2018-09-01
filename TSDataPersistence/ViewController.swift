@@ -51,6 +51,11 @@ class ViewController: UIViewController {
         model.name = "sdfsdf"
         model.age = "7"
         
+        
+//        let bModel = Bmodel()
+//        ts_cache.set(bModel, forKey: "hahah")
+        
+        
         ts_cache.set(model, forKey: "Model")
         
         if let md: AModel = ts_cache.object(forKey: "Model") {
@@ -71,10 +76,14 @@ class ViewController: UIViewController {
 }
 
 
-
 class AModel:Codable {
     var name = "洪利"
     var age = "8"
+//    var hah : Array<String>?
+    var hah : Array<SubUIImage>?
+    
+    
+    
 //    private enum CodingKeys: CodingKey {
 //        case name
 //        case age
@@ -96,5 +105,10 @@ class AModel:Codable {
   
     
 }
+
+class SubUIImage: UIImage, Codable {
+    
+}
+
 
 

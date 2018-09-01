@@ -134,24 +134,24 @@ public extension TSDataPersistenceCache {
      - parameter key:        unique key
      - parameter completion: stroe completion call back
      */
-//    public func set(_ object: T, forKey key: String, completion: CacheAsyncCompletion?) {
-//        _queue.async { [weak self] in
-//            guard let strongSelf = self else { completion?(nil, key, object); return }
-//            strongSelf.set(object, forKey: key)
-//            completion?(strongSelf, key, object)
-//        }
-//    }
-    public func set<T:Codable>(_ object: T, forKey key: String, completion: CacheAsyncCompletion?) {
+    //    public func set(_ object: T, forKey key: String, completion: CacheAsyncCompletion?) {
+    //        _queue.async { [weak self] in
+    //            guard let strongSelf = self else { completion?(nil, key, object); return }
+    //            strongSelf.set(object, forKey: key)
+    //            completion?(strongSelf, key, object)
+    //        }
+    //    }
+    public func ts_set<T:Codable>(_ object: T, forKey key: String, completion: CacheAsyncCompletion?) {
         _queue.async { [weak self] in
             guard let strongSelf = self else { completion?(nil, key, object); return }
-            strongSelf.set(object, forKey: key)
+            strongSelf.ts_set(object, forKey: key)
             completion?(strongSelf, key, object)
         }
     }
     public func setObject<T: Codable>(_ object: T, forKey key: String, completion: CacheAsyncCompletion?) {
         _queue.async { [weak self] in
             guard let strongSelf = self else { completion?(nil, key, object); return }
-            strongSelf.set(object, forKey: key)
+            strongSelf.ts_set(object, forKey: key)
             completion?(strongSelf, key, object)
         }
     }
@@ -225,7 +225,7 @@ public extension TSDataPersistenceCache {
      - parameter completion: stroe completion call back
      */
     
-    public func set<T:Codable>(_ object: T, forKey key: String) {
+    public func ts_set<T:Codable>(_ object: T, forKey key: String) {
         
         do {
             let encoder = JSONEncoder()
@@ -233,6 +233,8 @@ public extension TSDataPersistenceCache {
             memoryCache.set(object: aData as AnyObject, forKey: key)
             diskCache.set(aData, forKey: key)
         } catch {
+            memoryCache.set(object: object as AnyObject, forKey: key)
+            diskCache.set(object, forKey: key)
             print(error.localizedDescription)
         }
         
@@ -255,28 +257,32 @@ public extension TSDataPersistenceCache {
      - parameter completion: search completion call back
      */
     
-//    public func object(forKey key: String) -> AnyObject? {
-//        if let object = memoryCache.object(forKey: key) {
-//            return object
-//        }
-//        else {
-//            if let object = diskCache.object(forKey: key) {
-//                memoryCache.set(object: object, forKey: key)
-//                return object
-//            }
-//        }
-//        return nil
-//    }
-    public func object<T: Codable>(forKey key: String) -> T? {
+    //    public func object(forKey key: String) -> AnyObject? {
+    //        if let object = memoryCache.object(forKey: key) {
+    //            return object
+    //        }
+    //        else {
+    //            if let object = diskCache.object(forKey: key) {
+    //                memoryCache.set(object: object, forKey: key)
+    //                return object
+    //            }
+    //        }
+    //        return nil
+    //    }
+    public func ts_object<T: Codable>(forKey key: String) -> T? {
         if let object = memoryCache.object(forKey: key) {
             let decoder = JSONDecoder()
             do {
-                let model = try decoder.decode(T.self, from: object as! Data)
-                return model
+                if let _ = object as? Data {
+                    let model = try decoder.decode(T.self, from: object as! Data)
+                    return model
+                }else{
+                    return object as? T
+                }
             } catch {
                 print(error.localizedDescription)
             }
-
+            
         }
         else {
             if let object = diskCache.object(forKey: key) {
@@ -285,7 +291,7 @@ public extension TSDataPersistenceCache {
                 let decoder = JSONDecoder()
                 do {
                     let model = try decoder.decode(T.self, from: object as! Data)
-  
+                    
                     return model
                 } catch {
                     print(error.localizedDescription)
