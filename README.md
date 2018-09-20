@@ -51,3 +51,17 @@
 	    
 	}
 
+
+## 使用 2.0
+封装成 TSDataPersistence 类方法
+#### 写  
+>public static func set<T: Codable>(value: T, forKey key: String, bufferCache: TSDataPersistenceBufferCache)
+
+#### 读
+>public static func get<T: Codable>(forKey key: String, bufferCache: TSDataPersistenceBufferCache) -> T?
+
+#### 删 （单独删除，清空缓存）
+
+>public static func remove(forKey key: String, bufferCache: TSDataPersistenceBufferCache) -> Bool   //删除某个
+
+>public static func clear() -> Bool   //清空所有
