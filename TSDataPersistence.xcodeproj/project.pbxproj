@@ -20,6 +20,8 @@
 		51E8434C20DCCFBE00C7617D /* TSDataPersistenceLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E8434B20DCCFBE00C7617D /* TSDataPersistenceLinkedList.swift */; };
 		51E8435120DE23A700C7617D /* TSDataPersistence.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 51E8434F20DE23A600C7617D /* TSDataPersistence.podspec */; };
 		51E8435220DE23A700C7617D /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 51E8435020DE23A600C7617D /* LICENSE */; };
+		F596A1C921537EC0005A2EB7 /* TSDataPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F596A1C821537EC0005A2EB7 /* TSDataPersistence.swift */; };
+		F596A1CC2153847E005A2EB7 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F596A1CB2153847E005A2EB7 /* Keychain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		51E8434B20DCCFBE00C7617D /* TSDataPersistenceLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSDataPersistenceLinkedList.swift; sourceTree = "<group>"; };
 		51E8434F20DE23A600C7617D /* TSDataPersistence.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TSDataPersistence.podspec; sourceTree = SOURCE_ROOT; };
 		51E8435020DE23A600C7617D /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
+		F596A1C821537EC0005A2EB7 /* TSDataPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSDataPersistence.swift; sourceTree = "<group>"; };
+		F596A1CB2153847E005A2EB7 /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,8 +151,18 @@
 				51E8434720DCCF8600C7617D /* TSDataPersistenceDiskCache.swift */,
 				51E8434920DCCFAA00C7617D /* TSDataPersistenceCache.swift */,
 				51E8434B20DCCFBE00C7617D /* TSDataPersistenceLinkedList.swift */,
+				F596A1C821537EC0005A2EB7 /* TSDataPersistence.swift */,
+				F596A1CA215383E7005A2EB7 /* KeyChain */,
 			);
 			path = DataPersistenceTool;
+			sourceTree = "<group>";
+		};
+		F596A1CA215383E7005A2EB7 /* KeyChain */ = {
+			isa = PBXGroup;
+			children = (
+				F596A1CB2153847E005A2EB7 /* Keychain.swift */,
+			);
+			path = KeyChain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,9 +299,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				51E8434820DCCF8600C7617D /* TSDataPersistenceDiskCache.swift in Sources */,
+				F596A1C921537EC0005A2EB7 /* TSDataPersistence.swift in Sources */,
 				51E8434C20DCCFBE00C7617D /* TSDataPersistenceLinkedList.swift in Sources */,
 				51E8434620DCCEA800C7617D /* TSDataPersistenceMemoryCache.swift in Sources */,
 				51E8431720DCCD9700C7617D /* ViewController.swift in Sources */,
+				F596A1CC2153847E005A2EB7 /* Keychain.swift in Sources */,
 				51E8431520DCCD9700C7617D /* AppDelegate.swift in Sources */,
 				51E8434A20DCCFAA00C7617D /* TSDataPersistenceCache.swift in Sources */,
 			);

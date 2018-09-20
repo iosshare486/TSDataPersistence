@@ -56,12 +56,43 @@ class ViewController: UIViewController {
 //        ts_cache.set(bModel, forKey: "hahah")
         
         
-        ts_cache.set(model, forKey: "Model")
+//        ts_cache.ts_set(model, forKey: "Model")
         
-        if let md: AModel = ts_cache.object(forKey: "Model") {
+
+        
+        TSDataPersistence.set(value: model, forKey: "model", bufferCache: TSDataPersistenceBufferCache.disk)
+        
+        if let md: AModel = TSDataPersistence.get(forKey: "model", bufferCache: TSDataPersistenceBufferCache.disk) {
             print(md)
         }
 
+        
+        TSDataPersistence.set(value: "model", forKey: "model", bufferCache: TSDataPersistenceBufferCache.keyChain)
+        
+        if let md: String = TSDataPersistence.get(forKey: "model", bufferCache: TSDataPersistenceBufferCache.keyChain) {
+            print(md)
+        }
+        
+        TSDataPersistence.set(value: 11111, forKey: "model", bufferCache: TSDataPersistenceBufferCache.userDefaults)
+        
+        if let md: Int = TSDataPersistence.get(forKey: "model", bufferCache: TSDataPersistenceBufferCache.userDefaults) {
+            print(md)
+        }
+        
+        TSDataPersistence.clear()
+        
+        if let md: AModel = TSDataPersistence.get(forKey: "model", bufferCache: TSDataPersistenceBufferCache.disk) {
+            print(md)
+        }
+        
+        if let md: String = TSDataPersistence.get(forKey: "model", bufferCache: TSDataPersistenceBufferCache.keyChain) {
+            print(md)
+        }
+        
+        if let md: Int = TSDataPersistence.get(forKey: "model", bufferCache: TSDataPersistenceBufferCache.userDefaults) {
+            print(md)
+        }
+        
         
         //        }
         // Do any additional setup after loading the view, typically from a nib.
