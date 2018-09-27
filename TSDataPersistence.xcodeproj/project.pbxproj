@@ -152,17 +152,9 @@
 				51E8434920DCCFAA00C7617D /* TSDataPersistenceCache.swift */,
 				51E8434B20DCCFBE00C7617D /* TSDataPersistenceLinkedList.swift */,
 				F596A1C821537EC0005A2EB7 /* TSDataPersistence.swift */,
-				F596A1CA215383E7005A2EB7 /* KeyChain */,
-			);
-			path = DataPersistenceTool;
-			sourceTree = "<group>";
-		};
-		F596A1CA215383E7005A2EB7 /* KeyChain */ = {
-			isa = PBXGroup;
-			children = (
 				F596A1CB2153847E005A2EB7 /* Keychain.swift */,
 			);
-			path = KeyChain;
+			path = DataPersistenceTool;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
