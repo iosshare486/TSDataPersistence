@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "TSDataPersistence"
-  s.version      = "0.2.3"
+  s.version      = "0.3.0"
   s.summary      = "TSDataPersistence"
 
   # This description is used to generate tags and improve search results.
