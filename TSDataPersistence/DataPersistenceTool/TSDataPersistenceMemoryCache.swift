@@ -214,14 +214,14 @@ open class TSDataPersistenceMemoryCache {
     /**
      A share memory cache
      */
-    open static let shareInstance = TSDataPersistenceMemoryCache()
+    public static let shareInstance = TSDataPersistenceMemoryCache()
     
     /**
      Design constructor
      */
     public init () {
-        NotificationCenter.default.addObserver(self, selector: #selector(TSDataPersistenceMemoryCache._didReceiveMemoryWarningNotification), name: NSNotification.Name.UIApplicationDidReceiveMemoryWarning, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(TSDataPersistenceMemoryCache._didEnterBackgroundNotification), name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(TSDataPersistenceMemoryCache._didReceiveMemoryWarningNotification), name: UIApplication.didReceiveMemoryWarningNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(TSDataPersistenceMemoryCache._didEnterBackgroundNotification), name: UIApplication.didEnterBackgroundNotification, object: nil)
     }
 }
 

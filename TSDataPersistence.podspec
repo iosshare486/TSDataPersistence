@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "TSDataPersistence"
-  s.version      = "0.3.0"
+  s.version      = "2.0.0"
   s.summary      = "TSDataPersistence"
 
   # This description is used to generate tags and improve search results.
@@ -130,8 +130,8 @@ s.ios.deployment_target = '8.0'
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  # s.requires_arc = true
-s.swift_version = '4.0'
+  s.requires_arc = true
+  s.swift_version = '4.2'
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
 
