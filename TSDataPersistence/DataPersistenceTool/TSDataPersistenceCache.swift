@@ -290,9 +290,12 @@ public extension TSDataPersistenceCache {
                 
                 let decoder = JSONDecoder()
                 do {
-                    let model = try decoder.decode(T.self, from: object as! Data)
-                    
-                    return model
+                    if let dataInfo = object as? Data {
+                        let model = try decoder.decode(T.self, from: dataInfo )
+                        return model
+                    }else{
+                        return object as? T
+                    }
                 } catch {
                     print(error.localizedDescription)
                 }
